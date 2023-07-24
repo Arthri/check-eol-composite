@@ -1,22 +1,24 @@
-# reusable-workflow
-A reusable workflow for doing x, y, and z.
+# check-eol-composite
+A composite action for linting end-of-line sequences.
 
 ## Installation
-Add a new workflow under `.github/workflows/` with the following contents.
+Open the workflow(s) to add the composite action to, then add the step below to the desired jobs.
 ```yml
-name: New Reusable Workflow
-run-name: New Reusable Workflow
-
-on:
-  push:
-
 jobs:
-  reusable-workflow:
-    uses: Arthri/reusable-workflow/.github/workflows/reusable-workflow.yml@v1
-
+  job:
+    - name: Check End-of-Line Sequences
+      uses: Arthri/check-eol-composite@v1
 ```
 
 ## Usage
-1. Do this.
-1. Do that.
-1. This happens.
+
+### Default End-of-Line Sequence
+The workflow enforces `LF` for all files in the index. `autocrlf=true` modifies files in the working tree rather than the index and thus does not affect the composite action. The following example configures the workflow to enforce `CRLF` instead.
+```yml
+jobs:
+  job:
+    - name: Check End-of-Line Sequences
+      uses: Arthri/check-eol-composite@v1
+      with:
+        default-eol: crlf
+```

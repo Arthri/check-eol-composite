@@ -1,11 +1,1 @@
-# Test List
-A list of steps for testing the workflow's features.
-
-## Action fails randomly
-
-### Steps
-1. Push to GitHub.
-
-### Outputs
-1. Workflow triggers.
-1. Workflow fails randomly.
+See https://github.com/Arthri/check-eol/blob/master/docs/Test_List.md

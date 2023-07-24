@@ -1,6 +1,6 @@
 author: Arthri
 name: Check End-of-Line Sequences
-description: "Checks text files' end-of-line sequences."
+description: "Lints text files' end-of-line sequences."
 
 inputs:
   default-eol:
